@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hook_up_rent/pages/home/tab_index/index.dart';
+import 'package:hook_up_rent/pages/home/tab_info/index.dart';
 import 'package:hook_up_rent/widgets/page_content.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   List<Widget> _pageList = [
     TabIndex(),
     PageContent(name: '找房'),
-    PageContent(name: '资讯'),
+    TabInfoList(),
     PageContent(name: '我的'),
   ];
 
