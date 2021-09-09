@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hook_up_rent/config/application_routes.dart';
 import 'package:hook_up_rent/pages/home/info/index.dart';
 import 'package:hook_up_rent/pages/home/tab_index/index_navigator.dart';
 import 'package:hook_up_rent/pages/home/tab_index/index_recommend.dart';
@@ -13,7 +14,13 @@ class TabIndex extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: SearchBar(),
+        title: SearchBar(
+          showLoaction: true,
+          showMap: true,
+          onSearch: () {
+            ApplicationRoutes.router.navigateTo(context, '/search');
+          },
+        ),
       ),
       body: ListView(
         children: [

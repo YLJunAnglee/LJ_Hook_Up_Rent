@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hook_up_rent/pages/home/tab_index/index.dart';
 import 'package:hook_up_rent/pages/home/tab_info/index.dart';
+import 'package:hook_up_rent/pages/home/tab_profile/index.dart';
 import 'package:hook_up_rent/pages/home/tab_search/index.dart';
-import 'package:hook_up_rent/widgets/page_content.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
     TabIndex(),
     TabSearch(),
     TabInfoList(),
-    PageContent(name: '我的'),
+    TabProfile(),
   ];
 
   List<BottomNavigationBarItem> _tabBarItems = [

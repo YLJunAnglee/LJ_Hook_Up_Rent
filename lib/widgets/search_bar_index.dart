@@ -52,12 +52,15 @@ class _SearchBarState extends State<SearchBar> {
     });
   }
 
+  late FocusNode _focus;
+
   /// 初始化函数
   @override
   void initState() {
     // TODO: implement initState
     _txtController = TextEditingController(text: widget.inputValue);
     _searchWord = widget.inputValue ?? '';
+    _focus = FocusNode();
     super.initState();
   }
 
@@ -111,6 +114,7 @@ class _SearchBarState extends State<SearchBar> {
                 borderRadius: BorderRadius.circular(17.0)),
             padding: EdgeInsets.only(right: 10.0),
             child: TextField(
+              focusNode: _focus,
               controller: _txtController,
               onChanged: (String value) {
                 setState(() {
@@ -118,6 +122,9 @@ class _SearchBarState extends State<SearchBar> {
                 });
               },
               onTap: () {
+                if (widget.onSearchSubmit == null) {
+                  _focus.unfocus();
+                }
                 if (widget.onSearch != null) {
                   widget.onSearch!();
                 }
