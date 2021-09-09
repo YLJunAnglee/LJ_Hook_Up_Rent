@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hook_up_rent/pages/home/tab_search/dataList.dart';
 import 'package:hook_up_rent/widgets/common_image.dart';
+import 'package:hook_up_rent/widgets/common_tags.dart';
 
 class RoomListItemWidget extends StatelessWidget {
   final RoomListItemData data;
@@ -35,8 +36,7 @@ class RoomListItemWidget extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 Wrap(
-                  children:
-                      (data.tags ?? []).map((e) => Text(e + ',')).toList(),
+                  children: (data.tags ?? []).map((e) => CommonTag(e)).toList(),
                 ),
                 Text(
                   '${data.price} 元/月',
