@@ -19,7 +19,16 @@ class TabProfile extends StatelessWidget {
               onPressed: () {
                 ApplicationRoutes.router.navigateTo(context, '/setting');
               },
-              icon: Icon(Icons.settings))
+              icon: Icon(Icons.settings)),
+          TextButton(
+              onPressed: () {
+                ApplicationRoutes.router
+                    .navigateTo(context, '/testImagePicker');
+              },
+              child: Text(
+                '图片选择',
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              )),
         ],
       ),
       body: ListView(

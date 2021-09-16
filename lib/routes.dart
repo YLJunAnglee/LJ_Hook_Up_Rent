@@ -9,6 +9,7 @@ class Routes {
   static String setting = "/setting";
   static String roomManage = "/roomManage";
   static String roomAdd = "/roomAdd";
+  static String testImagePicker = "/testImagePicker";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = notFoundHandler;
@@ -19,5 +20,6 @@ class Routes {
     router.define(setting, handler: settingHandler);
     router.define(roomManage, handler: roomManageHandler);
     router.define(roomAdd, handler: roomAddPageHandler);
+    router.define(testImagePicker, handler: testImagePickerPageHandler);
   }
 }

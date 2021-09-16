@@ -8,6 +8,7 @@ import 'package:hook_up_rent/pages/room_add/index.dart';
 import 'package:hook_up_rent/pages/room_detail/index.dart';
 import 'package:hook_up_rent/pages/room_manage/index.dart';
 import 'package:hook_up_rent/pages/setting.dart';
+import 'package:hook_up_rent/pages/test_image_picker_demo.dart';
 
 var notFoundHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
@@ -48,4 +49,9 @@ var roomManageHandler = Handler(
 var roomAddPageHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
   return RoomAddPage();
+});
+
+var testImagePickerPageHandler = Handler(
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
+  return TestImagePickerPage();
 });
