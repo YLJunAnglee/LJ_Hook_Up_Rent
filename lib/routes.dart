@@ -6,6 +6,9 @@ class Routes {
   static String login = "/login";
   static String register = "/register";
   static String roomDetail = "/roomDetail";
+  static String setting = "/setting";
+  static String roomManage = "/roomManage";
+  static String roomAdd = "/roomAdd";
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = notFoundHandler;
@@ -13,5 +16,8 @@ class Routes {
     router.define(login, handler: loginHandler);
     router.define(register, handler: registerHandler);
     router.define(roomDetail, handler: roomDetailHandler);
+    router.define(setting, handler: settingHandler);
+    router.define(roomManage, handler: roomManageHandler);
+    router.define(roomAdd, handler: roomAddPageHandler);
   }
 }

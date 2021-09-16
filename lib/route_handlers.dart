@@ -4,7 +4,10 @@ import 'package:hook_up_rent/pages/home/index.dart';
 import 'package:hook_up_rent/pages/login.dart';
 import 'package:hook_up_rent/pages/not_found.dart';
 import 'package:hook_up_rent/pages/register.dart';
+import 'package:hook_up_rent/pages/room_add/index.dart';
 import 'package:hook_up_rent/pages/room_detail/index.dart';
+import 'package:hook_up_rent/pages/room_manage/index.dart';
+import 'package:hook_up_rent/pages/setting.dart';
 
 var notFoundHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
@@ -30,4 +33,19 @@ var roomDetailHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
   String? roomId = params['roomId']?.first;
   return RoomDetailPage(roomId: roomId);
+});
+
+var settingHandler = Handler(
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
+  return SettingPage();
+});
+
+var roomManageHandler = Handler(
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
+  return RoomManagePage();
+});
+
+var roomAddPageHandler = Handler(
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
+  return RoomAddPage();
 });

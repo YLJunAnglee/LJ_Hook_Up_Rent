@@ -12,7 +12,7 @@ class FunctionButtonWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (data.onTapHandle != null) {
-          data.onTapHandle!();
+          data.onTapHandle!(context);
         }
       },
       child: Container(
