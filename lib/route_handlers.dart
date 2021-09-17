@@ -33,7 +33,7 @@ var registerHandler = Handler(
 var roomDetailHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
   String? roomId = params['roomId']?.first;
-  return RoomDetailPage(roomId: roomId);
+  return RoomDetailPage(roomId: roomId ?? '');
 });
 
 var settingHandler = Handler(

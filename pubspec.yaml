@@ -34,6 +34,7 @@ dependencies:
   fluttertoast: ^8.0.8
   image_picker: ^0.8.4
   video_player: ^2.2.3
+  share: ^2.0.4
 
 dev_dependencies:
   flutter_test:
@@ -95,6 +96,9 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  #
+  fonts:
+    - family: CommonIcon
+      fonts:
+        - asset: static/fonts/iconfont.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
